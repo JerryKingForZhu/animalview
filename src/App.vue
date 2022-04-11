@@ -2,16 +2,25 @@
   <div id="app">
 	<el-container>
 	<el-header>
-		<h1>Logo</h1>
-		<el-menu :default-active="activeIndex" router="true" class="el-menu-demo" mode="horizontal" @select="handleSelect" style="float: right;">
-			<el-menu-item  >
-				<el-input v-model="input" placeholder="请输入所查内容"></el-input>
-			</el-menu-item>
-			<el-menu-item index="1" route="/">Home</el-menu-item>
-			<el-menu-item index="2" route="/about">About</el-menu-item>
-			<el-menu-item index="3" route="/">登录</el-menu-item>
-			<el-menu-item index="4" route="/about">注册</el-menu-item>
-		</el-menu>
+		
+		<div class="header-left">
+			<h1>Logo</h1>
+		</div>
+		<div class="header-middle">
+			<el-menu :default-active="activeIndex" router="true" class="el-menu-demo" mode="horizontal" @select="handleSelect" >
+				<el-menu-item index="1" route="/">主页</el-menu-item>
+				<el-menu-item index="2" route="/about">宠物百科</el-menu-item>
+			</el-menu>	
+		</div>
+		<div class="header-right">
+			<el-menu :default-active="activeIndex" router="true" class="el-menu-demo" mode="horizontal" @select="handleSelect" >
+				<el-menu-item  >
+					<el-input v-model="input" placeholder="请输入所查内容"></el-input>
+				</el-menu-item>
+				<el-menu-item index="3" route="/">登录</el-menu-item>
+				<el-menu-item index="4" route="/about">注册</el-menu-item>
+			</el-menu>	
+		</div>
 	</el-header>
 	<el-main style="padding: 0;">
 	<el-carousel indicator-position="outside" height="400px" interval="5000">
@@ -63,6 +72,7 @@ nav a.router-link-exact-active {
     color: #333;
     text-align: center;
     line-height: 60px;
+	display:flex
   }
 .el-main {
   background-color: #aaffff;
@@ -78,29 +88,45 @@ nav a.router-link-exact-active {
 }
 h1{
 	margin: 0;
-	float: left;
 	font-size: 32px;
 	font-weight: 400;
 }
 body{
 	margin: 0;
 }
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 18px;
-    opacity: 0.75;
-    line-height: 400px;
-    margin: 0;
-  }
-  
-  .el-carousel__item:nth-child(2n) {
-    background-color: #87bf05;
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #55aaff;
-  }
-  .el-carousel{
-	line-height: 0rem;
-  }
+.el-carousel__item h3 {
+color: #475669;
+font-size: 18px;
+opacity: 0.75;
+line-height: 400px;
+margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+background-color: #87bf05;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+background-color: #55aaff;
+}
+.el-carousel{
+line-height: 0rem;
+}
+.header-left{
+	background-color:#aaffff;
+	height:100%;
+	width: 15%;
+}
+.header-middle{
+	background-color:#00ff7f;
+	height:100%;
+	width: 40%;
+}
+.header-right{
+	background-color:#475669;
+	height:100%;
+	width: 45%;
+	
+	
+}
 </style>
