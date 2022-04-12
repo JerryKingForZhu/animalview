@@ -23,11 +23,6 @@
 		</div>
 	</el-header>
 	<el-main style="padding: 0;">
-	<el-carousel indicator-position="outside" height="400px" interval="5000">
-		<el-carousel-item v-for="item in 4" :key="item">
-		<h3>{{ item }}轮播图</h3>
-		</el-carousel-item>
-	</el-carousel>
 	<router-view/>
 	</el-main>
 	<el-footer>Footer</el-footer>
@@ -75,8 +70,7 @@ nav a.router-link-exact-active {
 	display:flex
   }
 .el-main {
-  background-color: #aaffff;
-  color: #333;
+ 
   text-align: center;
   line-height: 160px;
   margin-left: 200px;
@@ -94,24 +88,7 @@ h1{
 body{
 	margin: 0;
 }
-.el-carousel__item h3 {
-color: #475669;
-font-size: 18px;
-opacity: 0.75;
-line-height: 400px;
-margin: 0;
-}
 
-.el-carousel__item:nth-child(2n) {
-background-color: #87bf05;
-}
-
-.el-carousel__item:nth-child(2n+1) {
-background-color: #55aaff;
-}
-.el-carousel{
-line-height: 0rem;
-}
 .header-left{
 	background-color:#aaffff;
 	height:100%;
