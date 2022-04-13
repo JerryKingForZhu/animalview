@@ -1,8 +1,7 @@
 <template>
-		<el-carousel indicator-position="outside" height="600px" interval="5000">
+		<el-carousel indicator-position="inside" height="31.25rem"  interval="6000">
 			<el-carousel-item v-for="item in imagebox" :key="item.id">
 				<img :src="item.idView" height="100%" width="100%">
-				<h3>{{item}}</h3>
 			</el-carousel-item>
 		</el-carousel>
 </template>
@@ -29,13 +28,14 @@ export default {
 </script>
 
 <style>
-	.el-carousel__item {
+	.el-carousel__item h3{
 	font-size: 18px;
-	opacity: 0.75;
-	line-height: 600px;
+	opacity: 0.75;	
 	margin: 0;
 	}
 	.el-carousel{
 	line-height: 0rem;
+	width: 800px;
+	margin: 0 auto;
 	}
 </style>

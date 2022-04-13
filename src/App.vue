@@ -2,14 +2,15 @@
   <div id="app">
 	<el-container>
 	<el-header>
-		
 		<div class="header-left">
-			<h1>Logo</h1>
+			<h1>Animal</h1>
 		</div>
 		<div class="header-middle">
 			<el-menu :default-active="activeIndex" router="true" class="el-menu-demo" mode="horizontal" @select="handleSelect" >
 				<el-menu-item index="1" route="/">主页</el-menu-item>
-				<el-menu-item index="2" route="/about">宠物百科</el-menu-item>
+				<el-menu-item index="2" route="/">宠物百科</el-menu-item>
+				<el-menu-item index="3" route="/">热门资讯</el-menu-item>
+				<el-menu-item index="4" route="/"></el-menu-item>
 			</el-menu>	
 		</div>
 		<div class="header-right">
@@ -23,6 +24,16 @@
 		</div>
 	</el-header>
 	<el-main style="padding: 0;">
+	<el-tabs type="border-card">
+		<el-tab-pane label="热门推荐">热门推荐</el-tab-pane>
+		<el-tab-pane label="配置管理">配置管理</el-tab-pane>
+		<el-tab-pane label="角色管理">角色管理</el-tab-pane>
+		<el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
+		<el-tab-pane label="用户管理">用户管理</el-tab-pane>
+		<el-tab-pane label="配置管理">配置管理</el-tab-pane>
+		<el-tab-pane label="角色管理">角色管理</el-tab-pane>
+		<el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
+	</el-tabs>
 	<router-view/>
 	</el-main>
 	<el-footer>Footer</el-footer>
