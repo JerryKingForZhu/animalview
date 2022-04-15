@@ -24,16 +24,7 @@
 		</div>
 	</el-header>
 	<el-main style="padding: 0;">
-	<el-tabs type="border-card">
-		<el-tab-pane label="热门推荐">热门推荐</el-tab-pane>
-		<el-tab-pane label="配置管理">配置管理</el-tab-pane>
-		<el-tab-pane label="角色管理">角色管理</el-tab-pane>
-		<el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-		<el-tab-pane label="用户管理">用户管理</el-tab-pane>
-		<el-tab-pane label="配置管理">配置管理</el-tab-pane>
-		<el-tab-pane label="角色管理">角色管理</el-tab-pane>
-		<el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-	</el-tabs>
+	<RouteTitle></RouteTitle>
 	<router-view/>
 	</el-main>
 	<el-footer>Footer</el-footer>
@@ -42,7 +33,12 @@
 </template>
 
 <script>
+import RouteTitle from '@/components/RouteTitle.vue'
+	
 export default {
+	components:{
+		RouteTitle
+	},
 data() {
 	return {
   input: ''
@@ -83,7 +79,7 @@ nav a.router-link-exact-active {
 .el-main {
  
   text-align: center;
-  line-height: 160px;
+  /* line-height: 160px; */
   margin-left: 200px;
   margin-right: 200px;
 }
