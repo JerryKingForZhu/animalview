@@ -6,25 +6,25 @@
 			<h1>Animal</h1>
 		</div>
 		<div class="header-middle">
-			<el-menu :default-active="activeIndex" router="true" class="el-menu-demo" mode="horizontal" @select="handleSelect" >
+			<el-menu :default-active="activeIndex" router class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#aaffff" >
 				<el-menu-item index="1" route="/">主页</el-menu-item>
-				<el-menu-item index="2" route="/">宠物百科</el-menu-item>
-				<el-menu-item index="3" route="/">热门资讯</el-menu-item>
-				<el-menu-item index="4" route="/"></el-menu-item>
+				<el-menu-item index="2" route="/animalInfo">宠物百科</el-menu-item>
+				<el-menu-item index="3" route="/about">热门资讯</el-menu-item>
+				<el-menu-item index="4" route="/AnimalMoments">宠物圈</el-menu-item>
 			</el-menu>	
 		</div>
 		<div class="header-right">
-			<el-menu :default-active="activeIndex" router="true" class="el-menu-demo" mode="horizontal" @select="handleSelect" >
+			<el-menu :default-active="activeIndex2" router class="el-menu-demo" mode="horizontal" @select="handleSelect" >
 				<el-menu-item  >
 					<el-input v-model="input" placeholder="请输入所查内容"></el-input>
 				</el-menu-item>
-				<el-menu-item index="3" route="/">登录</el-menu-item>
-				<el-menu-item index="4" route="/about">注册</el-menu-item>
+				<el-menu-item index="1" route="/about">登录</el-menu-item>
+				<el-menu-item index="2" route="/">注册</el-menu-item>
 			</el-menu>	
 		</div>
 	</el-header>
 	<el-main style="padding: 0;">
-	<RouteTitle></RouteTitle>
+	<!-- <RouteTitle></RouteTitle> -->
 	<router-view/>
 	</el-main>
 	<el-footer>Footer</el-footer>
@@ -33,15 +33,23 @@
 </template>
 
 <script>
-import RouteTitle from '@/components/RouteTitle.vue'
+// import RouteTitle from '@/components/RouteTitle.vue'
 	
 export default {
 	components:{
-		RouteTitle
+		// RouteTitle
+	},
+	methods:{
+		handleSelect(key, keyPath) {
+		console.log(key, keyPath);
+		}
 	},
 data() {
 	return {
-  input: ''
+  input: '',
+  activeIndex:'1',
+  activeIndex2:'1',
+  
 	}
   }
 }
@@ -110,7 +118,8 @@ body{
 	background-color:#475669;
 	height:100%;
 	width: 45%;
-	
-	
+}
+.el-menu-demo{
+	margin: 0 auto;
 }
 </style>
