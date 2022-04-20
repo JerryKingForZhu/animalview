@@ -27,6 +27,16 @@ const routes = [
 	path: '/AnimalMoments',
 	name: 'AnimalMoments',
 	component: () => import( '../views/AnimalMoments.vue')
+  },
+  {
+	path: '/Login',
+	name: 'LoginVue',
+	component: () => import( '../views/LoginPage.vue')
+  },
+  {
+	path: '/news',
+	name: 'HotNews',
+	component: () => import( '../views/HotNews.vue')
   }
 ]
 

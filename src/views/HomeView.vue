@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-	<Marquee/>
-	<div style="display: flex;" >
-		<el-card class="box-card" >
-		<div slot="header" class="clearfix">
-		<span>卡片名称</span>
-		<el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+	<div class="home-header">
+		<Marquee/>
+		<div class="cardbox">
+			<el-card class="box-card" >
+				<div slot="header" class="clearfix">
+				<span>热点快讯</span>
+				</div>
+				<div v-for="o in 4" :key="o" class="text item">
+				{{'列表内容 ' + o }}
+				</div>
+			</el-card>
+			<el-card class="box-card" >
+				<div slot="header" class="clearfix">
+				<span>热点快讯</span>
+				</div>
+				<div v-for="o in 4" :key="o" class="text item">
+				{{'列表内容 ' + o }}
+				</div>
+			</el-card>
+			<el-card class="box-card" >
+				<div slot="header" class="clearfix">
+				<span>热点快讯</span>
+				</div>
+				<div v-for="o in 4" :key="o" class="text item">
+				{{'列表内容 ' + o }}
+				</div>
+			</el-card>
 		</div>
-		<div v-for="o in 4" :key="o" class="text item">
-		{{'列表内容 ' + o }}
-		</div>
-	</el-card>
 	</div>
   </div>
+  
 </template>
 
 <script>
@@ -29,6 +47,21 @@ export default {
 
 <style type="text/css">
 	.box-card{
-		width: 300px;
+		width: 100%;
+		height: 200px;
+		
+	}
+	.home{
+		display: flex;
+		height: 610px;
+	}
+	.home-header{
+		height: 100%;
+		width: 100%;
+		display: flex;
+	}
+	.cardbox{
+		width: 30%;
+		margin:0 auto;
 	}
 </style>
