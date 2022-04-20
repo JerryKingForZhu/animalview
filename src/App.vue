@@ -92,12 +92,12 @@ body{
 	padding: 0 !important;
 	margin-left: 18.75rem;
 	margin-right: 18.75rem;
-  }
+}
 .el-main {
   text-align: center;
   margin-left: 18.75rem;
   margin-right: 18.75rem;
-  height: 93.75rem;
+  height: 125rem;
 }
 .el-footer
 {

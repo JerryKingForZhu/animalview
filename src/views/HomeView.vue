@@ -29,6 +29,10 @@
 			</el-card>
 		</div>
 	</div>
+	<div class="home-body">
+		
+		
+	</div>
   </div>
   
 </template>
@@ -48,20 +52,27 @@ export default {
 <style type="text/css">
 	.box-card{
 		width: 100%;
-		height: 200px;
-		
+		height: 33.3%;
 	}
 	.home{
 		display: flex;
-		height: 610px;
+		height: 1600px;
+		flex-direction: column;
+		justify-content: flex-start;
 	}
 	.home-header{
-		height: 100%;
-		width: 100%;
+		height: 40%;
+		width: 99%;
 		display: flex;
+	}
+	.home-body{
+		background-color: #AAFFFF;
+		width: 99%;
+		height: 60%;
 	}
 	.cardbox{
 		width: 30%;
 		margin:0 auto;
+		height: 100%;
 	}
 </style>
