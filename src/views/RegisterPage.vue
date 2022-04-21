@@ -10,7 +10,7 @@
 		class="login-container"
 		hide-required-asterisk
 		>
-		<h3 class="login-title">登录</h3>
+		<h3 class="login-title">注册</h3>
 		<el-form-item
 		label="账户"
 		label-width="80px"
@@ -35,6 +35,18 @@
 			placeholder="请输入密码">
 			</el-input>
 		</el-form-item> 
+		<el-form-item
+		label="密码"
+		label-width="80px"
+		prop="password"
+		>
+			<el-input
+			type="password"
+			v-model="form.comfirmpassword"
+			autocomplete="off"
+			placeholder="请再次输入密码">
+			</el-input>
+		</el-form-item> 
 		<el-form-item >
 			<el-button type="primary" @click="login" class="login-submit" >登录</el-button>
 		</el-form-item>
@@ -51,12 +63,11 @@
 // import { getMenu} from '../../../src/api/data'
 // import { login} from '../../../src/api/login'
 export default {
-   name: 'LoginPage',
+   name: 'RegisterPage',
    data() {
        return {
           loginBg:require('../assets/m2.jpg'),
           form: {
-
           },
           rules: {
             loginName: [
@@ -89,23 +100,23 @@ export default {
     },
   methods: {
        login(){
-         if (this.form.password && this.form.password){
-			console.log("in login");
-           // login(this.form).then((res) => {
-           //   // this.$store.commit('clearMenu')
-           //   // this.$store.commit('setMenu',this.adminMenu)
-           //   const token = res.data
-           //   this.$store.commit('setToken',token)
-           //   // this.$store.commit('addMenu',this.$router)
-           //   this.$router.push({name: 'home'})
-           // })
-         }
-		else {
-           this.$message.warning("请填写用户名或密码")
-         }
+		this.$router.push({name: 'LoginVue'})
        },
       goRegister(){
-         this.$router.push({name: 'RegisterPage'})
+		if (this.form.password && this.form.password){
+				alert("in register");
+		// login(this.form).then((res) => {
+		//   // this.$store.commit('clearMenu')
+		//   // this.$store.commit('setMenu',this.adminMenu)
+		//   const token = res.data
+		//   this.$store.commit('setToken',token)
+		//   // this.$store.commit('addMenu',this.$router)
+		//   this.$router.push({name: 'home'})
+		// })
+		}
+		else {
+			this.$message.warning("请填写用户名或密码")
+		}
       }
    },
 

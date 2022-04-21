@@ -33,11 +33,16 @@ const routes = [
 	name: 'LoginVue',
 	component: () => import( '../views/LoginPage.vue')
   },
-  {
-	path: '/news',
-	name: 'HotNews',
-	component: () => import( '../views/HotNews.vue')
-  }
+	{
+		path: '/news',
+		name: 'HotNews',
+		component: () => import( '../views/HotNews.vue')
+	},
+	{
+		path: '/Register',
+		name: 'RegisterPage',
+		component: () => import( '../views/RegisterPage.vue')
+	}
 ]
 
 const router = new VueRouter({

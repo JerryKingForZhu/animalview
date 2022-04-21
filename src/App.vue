@@ -17,7 +17,7 @@
 					<el-divider direction="vertical"></el-divider>
 				</el-menu-item>
 				<el-menu-item index="5" route="/Login" >登录</el-menu-item>
-				<el-menu-item index="6" route="/">注册</el-menu-item>
+				<el-menu-item index="6" route="/Register">注册</el-menu-item>
 			</el-menu>	
 		</div>
 	</el-header>
@@ -81,18 +81,21 @@ h1{
 body{
 	margin: 0;
 }
-
+.el-container{
+	height: 100%;
+	width: 100%;
+}
 .el-header{
     background-color: #ffffd8;
     color: #333;
     text-align: center;
-    line-height: 60px;
+    line-height: 70px;
 	display:flex;
 	height: 70px !important;
 	padding: 0 !important;
 	margin-left: 18.75rem;
 	margin-right: 18.75rem;
-}
+	}
 .el-main {
   text-align: center;
   margin-left: 18.75rem;
