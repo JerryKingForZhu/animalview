@@ -1,10 +1,18 @@
 <template>
-	<h1>asdhlajkslkjdawdla</h1>
+	<div class="hotNews">
+		
+	</div>
 </template>
 
 <script>
 
 </script>
 
-<style>
+<style type="text/css">
+	.hotNews{
+		width: 100%;
+		display: flex;
+		height: 100%;
+		/* background-color: #00aaff; */
+	}
 </style>

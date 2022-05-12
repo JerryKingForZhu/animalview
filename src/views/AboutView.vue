@@ -13,6 +13,5 @@
 		text-align: center;
 		margin: 0 auto;
 		width: 100%;
-		background-color: #475669;
 	}
 </style>

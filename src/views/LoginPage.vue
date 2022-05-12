@@ -70,13 +70,6 @@ export default {
 
        }
    },
-  // mounted() {
-  //   document.querySelector('body').setAttribute('style', 'background-color:red')
-  // },
-  // beforeDestroy() {
-  //   document.querySelector('body').removeAttribute('style')
-  // },
-  //   进入VUE时首先调用的钩子函数
     mounted () {
       // 添加背景图片
       document.body.style.backgroundSize = '100%'
@@ -91,14 +84,11 @@ export default {
        login(){
          if (this.form.password && this.form.password){
 			console.log("in login");
-           // login(this.form).then((res) => {
-           //   // this.$store.commit('clearMenu')
-           //   // this.$store.commit('setMenu',this.adminMenu)
-           //   const token = res.data
-           //   this.$store.commit('setToken',token)
-           //   // this.$store.commit('addMenu',this.$router)
-           //   this.$router.push({name: 'home'})
-           // })
+			const token = "1231242143123"
+			this.$store.commit('setToken',token)
+			this.$store.commit('getToken')
+			this.$router.push({name: 'home'})
+			console.log(token)
          }
 		else {
            this.$message.warning("请填写用户名或密码")

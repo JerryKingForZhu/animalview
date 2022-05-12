@@ -102,7 +102,7 @@ export default {
        login(){
 		this.$router.push({name: 'LoginVue'})
        },
-      goRegister(){
+		goRegister(){
 		if (this.form.password && this.form.password){
 				alert("in register");
 		// login(this.form).then((res) => {

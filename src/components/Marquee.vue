@@ -31,7 +31,9 @@ export default {
 
 <style>
 	.marquee{
-		width: 100%;
+		width: 60%;
+		height: 100%;
+		
 	}
 	.el-carousel__item h3{
 	font-size: 18px;

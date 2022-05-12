@@ -1,9 +1,17 @@
 <template>
-	<h1>this is animal moments, lets share our pets togather</h1>
+	<div class="animal-moments">
+		
+	</div>
 </template>
 
 <script>
 </script>
 
-<style>
+<style type="text/css">
+	.animal-moments{
+		width: 100%;
+		display: flex;
+		height: 100%;
+		/* background-color: #006969; */
+	}
 </style>

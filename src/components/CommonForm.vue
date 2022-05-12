@@ -188,11 +188,7 @@ export default {
 </script>
 
 <style lang="less" spcoed>
-//.textarea deep .el-textarea__inner{
-//  //min-height: 300px;
-//  //font-family:"Microsoft" !important;
-//  //font-size:20px !important;
-//}
+
 .el-input.is-disabled .el-input__inner {
   background-color: #FFF;
   border-color: #E4E7ED;
